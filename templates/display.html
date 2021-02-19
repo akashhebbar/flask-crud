@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List</title>
+</head>
+<body>
+
+<h3>Employee Information</h3>
+<table border=5>
+    <thead>
+        <td>AmbassadorId</td>
+        <td>QueueId</td>
+        <td>State</td>
+        <td>Amount</td>
+        <td>Reason</td>
+        <td>Taskcount</td>
+    </thead>
+
+    {% for row in rows %}
+
+        <tr>
+            <td>{{row["ambassador"]}}</td>
+            <td>{{row["queue"]}}</td>
+            <td>{{row["state"]}}</td>
+            <td>{{row["amount"]}}</td>
+             <td>{{row["reason"]}}</td>
+             <td>{{row["amount"]}}</td>
+            <td>{{row["task"]}}</td>
+        </tr>
+
+    {% endfor %}
+</table>
+<br><br>
+
+<a href="/">Go back to home page</a>
+
+</body>
+</html>

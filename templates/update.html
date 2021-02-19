@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Update Details</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<h2 class="text-center">Update Details</h2><hr>
+{% for data in data %}
+<form action = "/updatedetails{{data["aid"]}}" method="POST">
+    <div class="mx-auto" style="width: 200px;">
+         <div class="form-group >
+    <label for="aid">AmbassadorId</label>
+<input type="text" class="form-control"  name="aid"  placeholder="Enter AmbassadorId"  value='{{ data["aid"] }}' required>
+     </div>
+<div>
+     <div class="form-group">
+    <label>QueueId</label>
+<input type="text" class="form-control" name="qid"  placeholder="Enter QueueId" value="{{ data["qid"]}}" >
+     </div>
+ <div class="form-group ">
+    <label for="aid">State</label>
+<input type="text" class="form-control"  name="state"  placeholder="Enter State" required>
+     </div>
+    <div class="form-group ">
+    <label for="aid">Amount</label>
+<input type="text" class="form-control"  name="amount"  placeholder="Enter Amount" required>
+     </div>
+
+       <div class="form-group ">
+    <label for="aid">Reason</label>
+<input type="text" class="form-control"  name="reason"  placeholder="Enter Reason" required>
+
+</div>
+    <div class="form-group ">
+    <label for="aid">TaskCount</label>
+<input type="text" class="form-control"  name="task"  placeholder="Enter TaskCount" required>
+     </div>
+<button type="submit" class="btn btn-success">Submit</button>
+  <a href="/" class="btn btn-success" role="button" aria-pressed="true">Home</a><br>
+
+
+    </table>
+    </form>
+     {% endfor %}
+</form>
+</body>
+</html>
+
